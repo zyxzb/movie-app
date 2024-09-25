@@ -1,6 +1,6 @@
-import { PLACEHOLDER_IMAGE } from '@/_lib/constants';
+import Image from 'next/image';
 
-import ImageWithPlaiceholder from './ImageWithPlaiceholder';
+import { PLACEHOLDER_IMAGE } from '@/_lib/constants';
 
 type Rating = {
   Source: string;
@@ -62,7 +62,7 @@ const MovieDetails = ({ data }: { data: MovieProps }) => {
   return (
     <div className='flex flex-col gap-10 lg:flex-row'>
       <div className='relative aspect-square w-full max-w-[500px] border'>
-        <ImageWithPlaiceholder
+        <Image
           src={Poster !== 'N/A' ? Poster : PLACEHOLDER_IMAGE}
           alt={Title}
           fill

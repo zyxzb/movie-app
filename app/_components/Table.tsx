@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
-import ImageWithPlaiceholder from '@/_components/ImageWithPlaiceholder';
 import {
   Table as TableCn,
   TableBody,
@@ -43,7 +43,7 @@ const Table = ({ data, totalResults }: TableProps) => {
         {data.map((item) => (
           <TableRow key={item.imdbID}>
             <TableCell className='w-[190px]'>
-              <ImageWithPlaiceholder
+              <Image
                 src={item.Poster !== 'N/A' ? item.Poster : PLACEHOLDER_IMAGE}
                 alt={item.Title}
                 width={96}
